@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp"
+
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="20sp"
+        android:gravity="center"
+        android:text="№"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/loan_id"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="20sp"
+        android:gravity="center"
+        android:text="300001"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/button_info"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:text="Информация по договору"
+        android:textAllCaps="false"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="20sp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:background="@drawable/fon_cloud"
+        android:src="@drawable/open"
+        android:text=""
+        android:textStyle="bold" />
+
+
+</LinearLayout>
+
