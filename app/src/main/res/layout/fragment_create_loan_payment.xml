@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/loan_list"
+    android:id="@+id/create_payment_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".ui.LoanFragment">
 
     <LinearLayout
-        android:id="@+id/main"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -42,13 +42,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Номер договора:"
+                android:text="БИН организации:"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/pawn_ticket_number"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/orgBIN"
+                android:layout_width="match_parent"
+                android:inputType="number"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:gravity="center" />
@@ -64,17 +65,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="ИИН:"
+                android:text="Номер залога:"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/new_period"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/pawn_ticked_number"
+                android:inputType="number"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:gravity="center" />
         </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -84,30 +88,46 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Уже внесено:"
+                android:text="Новый период займа:"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/main_debt_sum"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/new_period"
+                android:inputType="number"
+                android:layout_width="53dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:gravity="start"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2sp"
-                android:text="тг."
-                android:textColor="#000" />
+                android:gravity="left"
+                android:text="Номер операции:"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/reference_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center" />
         </LinearLayout>
-
-
         <Button
-            android:id="@+id/calculate"
+            android:id="@+id/prolongation"
             android:layout_width="277dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -116,6 +136,9 @@
             android:shadowColor="#7436C1"
             android:text="Продлить"
             android:textColor="@android:color/black" />
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -136,12 +159,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Дата возврата займа:"
+                android:text="Сумма основного долга:"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/return_date"
+                android:id="@+id/credit_sum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -157,12 +180,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Гарантий срок:"
+                android:text="Сумма процентов:"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/guarantee_date"
+                android:id="@+id/percent_sum"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -181,66 +204,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Сумма займа:"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/credit_sum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:gravity="start"
-                android:text=""
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2sp"
-                android:text="тг."
-                android:textColor="#000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Сумма процентов:"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/percent_sum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:gravity="start"
-                android:text=""
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2sp"
-                android:text="тг."
-                android:textColor="#000" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Сумма к погашению:"
+                android:text="Итого к погащению:"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
@@ -262,18 +226,56 @@
                 android:textColor="#000" />
         </LinearLayout>
 
-
-        <Button
-            android:id="@+id/prolongation"
-            android:layout_width="277dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/holo_red_dark"
-            android:gravity="center"
-            android:shadowColor="#7436C1"
-            android:text="Оплатить"
-            android:textColor="@android:color/black"
-            android:visibility="invisible" />
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Новая дата возврата:"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/return_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Новая дата гарантии:"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/guarantee_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </RelativeLayout>

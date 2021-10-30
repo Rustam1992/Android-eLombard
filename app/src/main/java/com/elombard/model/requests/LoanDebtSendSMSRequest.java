@@ -1,9 +1,10 @@
 package com.elombard.model.requests;
 
 public class LoanDebtSendSMSRequest extends DefaultRequest{
-   private String orgBIN;
+    private String orgBIN;
     private String clientIIN;
     private Long pawnTicketNumber;
+
 
     public LoanDebtSendSMSRequest(String token, String orgBIN, String clientIIN, Long pawnTicketNumber) {
         super(token);

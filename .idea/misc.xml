@@ -6,7 +6,9 @@
         <entry key="..\:/Users/1/Desktop/eLombard/app/src/main/res/layout/activity_auth.xml" value="0.33" />
         <entry key="..\:/Users/1/Desktop/eLombard/app/src/main/res/layout/activity_login_by_phone_main2.xml" value="0.26063829787234044" />
         <entry key="..\:/Users/1/Desktop/eLombard/app/src/main/res/layout/fragment_client_info.xml" value="0.25555555555555554" />
+        <entry key="..\:/Users/1/Desktop/eLombard/app/src/main/res/layout/fragment_create_loan_payment.xml" value="0.22" />
         <entry key="..\:/Users/1/Desktop/eLombard/app/src/main/res/layout/fragment_loan.xml" value="0.25555555555555554" />
+        <entry key="..\:/Users/1/Desktop/eLombard/app/src/main/res/layout/fragment_payment.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/1/Desktop/eLombard/app/src/main/res/layout/fragment_prolongation.xml" value="0.2692502532928065" />
       </map>
     </option>

@@ -1,18 +1,18 @@
 package com.elombard.model.requests;
 
-public class GetOverDraftByLoanIdRequest extends DefaultRequest {
+public class LoanDebtRequest extends DefaultRequest {
     private String orgBIN;
    private String clientIIN;
     private Long pawnTicketNumber;
 
-    public GetOverDraftByLoanIdRequest(String token, String orgBIN, String clientIIN, Long pawnTicketNumber) {
+    public LoanDebtRequest(String token, String orgBIN, String clientIIN, Long pawnTicketNumber) {
         super(token);
         this.orgBIN = orgBIN;
         this.clientIIN = clientIIN;
         this.pawnTicketNumber = pawnTicketNumber;
     }
 
-    public GetOverDraftByLoanIdRequest(String token) {
+    public LoanDebtRequest(String token) {
         super(token);
     }
 

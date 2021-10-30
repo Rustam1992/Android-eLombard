@@ -14,17 +14,14 @@ import android.widget.TextView;
 
 import com.elombard.MainActivity;
 import com.elombard.R;
-import com.elombard.interfaces.Consumer;
-import com.elombard.model.results.OverDraft;
-import com.elombard.model.results.ResponseData;
+import com.elombard.model.results.LoanDebtResult;
 import com.elombard.services.RetrofitController;
-import com.elombard.services.SingleResponseCallBack;
 
 public class LoanFragment extends Fragment {
     private static String LOAN_ID_PARAM = "loanId";
     private Long loanId;
     RetrofitController r;
-    OverDraft overDraft;
+    LoanDebtResult loanDebtResult;
     private TextView loanIdText;
     private TextView returnDate;
     private TextView guaranteeDate;
@@ -40,16 +37,16 @@ public class LoanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_prolongation, container, false);
+        return inflater.inflate(R.layout.fragment_create_loan_payment, container, false);
 
     }
 
     private void updateOverDraft() {
         loanIdText.setText(Math.toIntExact(loanId));
-        returnDate.setText(overDraft.getReturnDate());
-        guaranteeDate.setText(overDraft.getGuaranteeDate());
-        creditSum.setText(overDraft.getCreditSum());
-        interestSum.setText(overDraft.getPercentSum());
+        returnDate.setText(loanDebtResult.getReturnDate());
+        guaranteeDate.setText(loanDebtResult.getGuaranteeDate());
+        creditSum.setText(loanDebtResult.getCreditSum());
+        interestSum.setText(loanDebtResult.getPercentSum());
     }
 
     @Override

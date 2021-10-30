@@ -1,13 +1,22 @@
 package com.elombard.model.results;
 
 
-public class OverDraft {
+public class LoanDebtResult {
 
     private Integer creditSum;
     private Integer percentSum;
+    private Integer totalSum;
     private String returnDate;
     private String guaranteeDate;
-    private String maxPeriod;
+
+
+    public LoanDebtResult(Integer creditSum, Integer percentSum, Integer totalSum, String returnDate, String guaranteeDate) {
+        this.creditSum = creditSum;
+        this.percentSum = percentSum;
+        this.totalSum = totalSum;
+        this.returnDate = returnDate;
+        this.guaranteeDate = guaranteeDate;
+    }
 
     public Integer getCreditSum() {
         return creditSum;
@@ -25,6 +34,14 @@ public class OverDraft {
         this.percentSum = percentSum;
     }
 
+    public Integer getTotalSum() {
+        return totalSum;
+    }
+
+    public void setTotalSum(Integer totalSum) {
+        this.totalSum = totalSum;
+    }
+
     public String getReturnDate() {
         return returnDate;
     }
@@ -39,14 +56,6 @@ public class OverDraft {
 
     public void setGuaranteeDate(String guaranteeDate) {
         this.guaranteeDate = guaranteeDate;
-    }
-
-    public String getMaxPeriod() {
-        return maxPeriod;
-    }
-
-    public void setMaxPeriod(String maxPeriod) {
-        this.maxPeriod = maxPeriod;
     }
 }
 
